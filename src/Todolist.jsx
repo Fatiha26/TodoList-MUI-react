@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
+import List from './List';
 
 const Todolist = () =>  
     {
@@ -16,17 +17,30 @@ const Todolist = () =>
                 return [...prevValue, item]
             });
             setItem(" ");
-        }
+        };
         return(
             <>
                 <div className="main-div">
                     <div className="center-div">
                         <h1>Todo List</h1>
                         <br />
-                        <input type="text" placeholder='Add Items' onChange={itemEvent} />
+                        <input type="text" value={item} placeholder='Add Items' onChange={itemEvent} />
                         <Button className='newbtn' onClick={listofItem}>
                             <AddIcon />
                         </Button>
                         <br />
 
-                        <ol
+                        <ol>
+                            {newItem.map((val)=>{
+                                return(<List text={val}/>)
+                                })}
+                        </ol>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+
+
+export default Todolist;
