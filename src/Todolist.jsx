@@ -20,13 +20,13 @@ const Todolist = () =>
         };
         return(
             <>
-                <div className="main-div">
-                    <div className="center-div">
+                <div className="main_div">
+                    <div className="center_div">
                         <h1>Todo List</h1>
                         <br />
                         <input type="text" value={item} placeholder='Add Items' onChange={itemEvent} />
                         <Button className='newbtn' onClick={listofItem}>
-                            <AddIcon />
+                            <AddIcon className='add' />
                         </Button>
                         <br />
 

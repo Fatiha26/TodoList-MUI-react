@@ -7,9 +7,9 @@ const List = (props) =>{
     const cut = () => {
         setLine(true);
     }
-    
+
     return(<>
-    <div className="todo-style">
+    <div className="todo_style">
         <span onClick={cut}>
             <DeleteIcon className="deleteicon"></DeleteIcon>
         </span>
